@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Bhubaneswar"/>
+    <item android:title="Cuttack"/>
+    <item android:title="Rourkela"/>
+    <item android:title="Brahmapur"/>
+    <item android:title="Sambalpur"/>
+    <item android:title="Puri"/>
+    <item android:title="Balasore"/>
+    <item android:title="Bhadrak"/>
+    <item android:title="Baripada"/>
+    <item android:title="Jharsuguda"/>
+
+
+</menu>
