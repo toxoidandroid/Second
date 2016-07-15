@@ -39,18 +39,28 @@ public class Offer_Details extends AppCompatActivity implements OnMapReadyCallba
     String mob = "7381885658";
     TextView details;
     FloatingActionButton fab;
-
+    int value;
+    ImageView HalfImage;
+    static Integer[] drawableArray = {R.drawable.zz,R.drawable.yy,R.drawable.xx,R.drawable.ww,R.drawable.vv,
+            R.drawable.uu,R.drawable.tt,R.drawable.pp,R.drawable.qq,R.drawable.rr};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_offer__details);
-
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+           value = extras.getInt("key");
+            //The key argument here must match that used in the other activity
+        }
+        FullImage = (ImageView) findViewById(R.id.imageView3);
+        HalfImage = (ImageView) findViewById(R.id.imageView2);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimaryDark));
         }
+        FullImage.setImageResource(drawableArray[value]);
 
-
+        HalfImage.setImageResource(drawableArray[value]);
         MapFragment mapFragment = (MapFragment) getFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(Offer_Details.this);
@@ -63,7 +73,7 @@ public class Offer_Details extends AppCompatActivity implements OnMapReadyCallba
         setSupportActionBar(mActionBarToolbar);
 
         scrollView = (ScrollView) findViewById(R.id.scrollView);
-        ImageView HalfImage = (ImageView) findViewById(R.id.imageView2);
+
         FullImage = (ImageView) findViewById(R.id.imageView3);
         HalfImage.setOnClickListener(new View.OnClickListener() {
             @Override

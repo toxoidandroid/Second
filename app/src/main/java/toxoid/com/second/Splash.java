@@ -26,7 +26,7 @@ String ss="my app";
 
         //Customize Circular Reveal
         configSplash.setBackgroundColor(R.color.colorPrimary); //any color you want form colors.xml
-        configSplash.setAnimCircularRevealDuration(2000); //int ms
+        configSplash.setAnimCircularRevealDuration(1500); //int ms
         configSplash.setRevealFlagX(Flags.REVEAL_RIGHT);  //or Flags.REVEAL_LEFT
         configSplash.setRevealFlagY(Flags.REVEAL_BOTTOM); //or Flags.REVEAL_TOP
 
@@ -34,7 +34,7 @@ String ss="my app";
 
         //Customize Logo
         configSplash.setLogoSplash(R.drawable.mm); //or any other drawable
-        configSplash.setAnimLogoSplashDuration(2000); //int ms
+        configSplash.setAnimLogoSplashDuration(1500); //int ms
         configSplash.setAnimLogoSplashTechnique(Techniques.ZoomInDown); //choose one form Techniques (ref: https://github.com/daimajia/AndroidViewAnimations)
 
 
@@ -50,13 +50,14 @@ String ss="my app";
           */
 
         //Customize Title
-        configSplash.setTitleSplash("My Awesome App");
+      /*  configSplash.setTitleSplash("My Awesome App");
         configSplash.setTitleTextColor(R.color.colorAccent);
         configSplash.setTitleTextSize(30f); //float value
         configSplash.setAnimTitleDuration(3000);
         configSplash.setAnimTitleTechnique(Techniques.FlipInX);
        // configSplash.setTitleFont("fonts/myfont.ttf"); //provide string to your font located in assets/fonts/
-
+   */
+        configSplash.setTitleSplash("World Of Offers");
     }
 
     @Override

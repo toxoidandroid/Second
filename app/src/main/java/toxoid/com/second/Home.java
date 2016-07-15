@@ -84,6 +84,7 @@ public class Home extends AppCompatActivity
                         // TODO Handle item click
                         Log.e("@@@@@",""+position);
                         Intent intent =new Intent(Home.this,Offer_Details.class);
+                        intent.putExtra("key",position);
                          startActivity(intent);
                     }
                 })
